@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "MontM";
+}
+
+.background_img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.logo {
+  position: absolute;
+  width: 15vw;
+  margin-left: 5%;
+}
+
+.tagline {
+  position: absolute;
+  width: 50%;
+  margin-top: 30%;
+  margin-left: 11%;
+}
+
+/* Import Google Fonts */
+
+@font-face {
+  font-family: "MontB";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "MontM";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "MontR";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "MontSB";
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "PopR";
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "PopSB";
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "PopB";
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+/*************************************************
+******************Main
+********************************************************/
+
+main {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+main .popular-recipes {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .popular-recipes h1 {
+  color: #a80e0e;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+main .popular-recipes img {
+  width: 20%;
+}
+
+main .popular-recipes p {
+  color: #382e36;
+  font-size: 12px;
+}
+
+main .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 3% 0;
+}
+
+main .buttons a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #a80e0e;
+  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+}
+
+main .buttons a:hover {
+  background-color: #e1a700;
+}
+
+main .item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+main .item-container .item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+main .item-container .item .item-image {
+  width: 100%;
+}
+
+main .item-container .item .item-image img {
+  width: 100%;
+}
+
+main .item-container .item .item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 4% 5% 4%;
+}
+
+main .item-container .item .item-info .like {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main .item-container .item .item-info .item-review {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+main .item-container .item .item-info .item-review a {
+  text-decoration: none;
+}
+
+main .item-container .item .item-info .item-price {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font: "Montserrat";
+}
+
+main .item-container .item .item-info .name {
+  font: "Montserrat";
+}
+
+.item-price img {
+  width: 30%;
+}
+
+.name p {
+  font-size: 20px;
+}
+/*****************************
+*********************footer
+*************************/
+
+footer .foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+footer .foot p {
+  font-size: 0.7rem;
+}
+
+/***********************/
+
+@media screen and (max-width: 500px) {
+  main .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+/* review page */
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.popup .innerpopup {
+  position: absolute;
+  width: 45%;
+  background-color: #fff;
+  top: 20%;
+  left: 25%;
+  border-radius: 20px;
+  border: 1px solid beige;
+  font-family: "MontSB";
+}
+
+.popup .innerpopup img {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 18px;
+}
+
+.popup .popup-content {
+  padding: 20px;
+  line-height: 2;
+  height: 400px;
+  overflow: scroll;
+}
+
+.popup-content div.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85px;
+  border: 1px solid;
+  border-radius: 100px;
+  padding: 0px 18px;
+  margin: 1%;
+}
+.popup-content div.btn img {
+  position: initial;
+}
+.popup-content div.content p {
+  font-size: 0.7rem;
+}
+.category-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.submit-btn .submit {
+  background-color: #e1a700;
+  border-radius: 25px;
+  width: 120px;
+  height: 30px;
+  border-bottom: none;
+  font-family: "MontSB";
+  color: #fff;
+}
+.input-content input {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+/* Cart page */
+
+main .cart {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .cart img {
+  width: 20%;
+}
+main .cart-container .item {
+  display: flex;
+  margin: 20px 0;
+}
+main .cart-container .qty {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+main .cart-container .qty p {
+  padding: 5px 10px;
+}
+main .cart-container .decrement,
+.increment {
+  background-color: #c9c9c9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+main .cart-container .item-info {
+  margin-left: 20px;
+  line-height: 2;
+}
+
+.qty-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  gap: 20%;
+}
+.name p {
+}
+.item-price img {
+  width: 150px;
+}
+
+.cart-link {
+  width: 100%;
+  text-align: right;
+  background-color: #e1a700;
+  padding: 24px 0px;
+}
+.cart-link a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+.home-link {
+  width: 100%;
+  text-align: right;
+  background-color: #e1a700;
+  padding: 24px 0px;
+  
+}
+.home-link a {
+  text-decoration: none;
+  color: black;
+  padding: 40px;
+}
+
+main .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 3% 0;
+}
+
+main .buttons p {
+  text-decoration: none;
+  color: #fff;
+  background-color: #e1a700;
+  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+}
+
+main .buttons p:hover {
+  background-color: #e1a700;
+}
+
+@media only screen and (max-width: 400px) {
+  .cart-container .item {
+    flex-direction: column;
+  }
+  .cart-container .item img {
+    width: 100%;
+  }
+  .cart-container .item .name p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+}
